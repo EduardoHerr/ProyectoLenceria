@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\login.css" />
     <Content Include="Login.aspx" />
     <Content Include="Mantenimientos\css\principal.css" />
     <Content Include="Mantenimientos\Principal.aspx" />
