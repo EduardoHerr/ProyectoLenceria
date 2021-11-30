@@ -70,6 +70,10 @@
     <Content Include="css\login.css" />
     <Content Include="Login.aspx" />
     <Content Include="Mantenimientos\css\principal.css" />
+    <Content Include="Mantenimientos\images\img_lights_wide.jpg" />
+    <Content Include="Mantenimientos\images\img_mountains_wide.jpg" />
+    <Content Include="Mantenimientos\images\img_nature_wide.jpg" />
+    <Content Include="Mantenimientos\images\img_snow_wide.jpg" />
     <Content Include="Mantenimientos\Principal.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
