@@ -26,12 +26,12 @@
       </div>
     </div>
     <div class="sidebar">
-      <a href="#home"><i class="far fa-star"></i> Lo más Destacado</a>
-      <a href="#news"><i class="fas fa-hat-cowboy"></i> Cabeza</a>
+      <a href="Inicio.aspx"><i class="far fa-star"></i> Lo más Destacado</a>
+      <a href="Cabeza.aspx"><i class="fas fa-hat-cowboy"></i> Cabeza</a>
       <a href="ParteSuperior.aspx"><i class="fas fa-tshirt"></i> Parte Superior</a>
-      <a href="#contact"><i class="fas fa-socks"></i> Parte Inferior</a>
-      <a href="#about"><i class="fas fa-glasses"></i> Accesorios</a>
-      <a href="#"><i class="fas fa-shoe-prints"></i> Calzado</a>
+      <a href="ParteInferior.aspx"><i class="fas fa-socks"></i> Parte Inferior</a>
+      <a href="Accesorios.aspx"><i class="fas fa-glasses"></i> Accesorios</a>
+      <a href="Cabeza.aspx"><i class="fas fa-shoe-prints"></i> Calzado</a>
     </div>
     <form runat="server">
         <!--Contenido Principal-->
