@@ -74,7 +74,7 @@
     <Content Include="Mantenimientos\images\img_mountains_wide.jpg" />
     <Content Include="Mantenimientos\images\img_nature_wide.jpg" />
     <Content Include="Mantenimientos\images\img_snow_wide.jpg" />
-    <Content Include="Mantenimientos\Principal.aspx" />
+    <Content Include="Mantenimientos\Inicio.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -85,19 +85,19 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Mantenimientos\Inicio.aspx.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Inicio.aspx.designer.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Mantenimientos\MainPage.Master.cs">
       <DependentUpon>MainPage.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Mantenimientos\MainPage.Master.designer.cs">
       <DependentUpon>MainPage.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Mantenimientos\Principal.aspx.cs">
-      <DependentUpon>Principal.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Mantenimientos\Principal.aspx.designer.cs">
-      <DependentUpon>Principal.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

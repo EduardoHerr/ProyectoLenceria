@@ -36,7 +36,9 @@
     <form runat="server">
         <!--Contenido Principal-->
         <div class="content">
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+            <h1>
+            <asp:Label ID="lblSaludo" runat="server" Text=""></asp:Label>
+                </h1>
             <hr />
             <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server"></asp:ContentPlaceHolder>
         </div>

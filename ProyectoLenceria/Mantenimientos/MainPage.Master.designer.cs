@@ -15,13 +15,13 @@ namespace ProyectoLenceria.Mantenimientos
     {
 
         /// <summary>
-        /// Control ContentPlaceHolder1.
+        /// Control lblSaludo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.Label lblSaludo;
 
         /// <summary>
         /// Control ContentPlaceHolder2.

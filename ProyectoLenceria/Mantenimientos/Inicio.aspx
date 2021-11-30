@@ -1,17 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Mantenimientos/MainPage.Master" AutoEventWireup="true" CodeBehind="Principal.aspx.cs" Inherits="ProyectoLenceria.Mantenimientos.Principal" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1>
-        <asp:Label ID="lblSaludo" runat="server" Text=""></asp:Label>
-
-    </h1>
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
-
-    
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Mantenimientos/MainPage.Master" AutoEventWireup="true" CodeBehind="Inicio.aspx.cs" Inherits="ProyectoLenceria.Mantenimientos.Inicio" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
       
-      
-
-      <div class="sliderimage">
+         <div class="sliderimage">
         <div class="slihijo" style="width: 100%;color: white; height: 55vh;">
           <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -163,6 +153,5 @@
           </div>
         </div>
       </div>
-    
 
 </asp:Content>
