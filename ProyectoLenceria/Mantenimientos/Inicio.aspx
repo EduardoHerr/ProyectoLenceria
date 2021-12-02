@@ -59,8 +59,8 @@
               <div class="card-body">
                 <h5 class="card-title">Nombre Prod</h5>
                 <p class="card-text">Breve descripción</p>
-                <a href="#" class="btn btn-primary"
-                  ><i class="fas fa-shopping-cart"></i> Adquirir</a
+                <a href="Infor.aspx" class="btn btn-primary"
+                  ><i class="fas fa-plus"></i> Adquirir</a
                 >
               </div>
             </div>
@@ -75,8 +75,8 @@
               <div class="card-body">
                 <h5 class="card-title">Nombre Prod</h5>
                 <p class="card-text">Breve descripción</p>
-                <a href="#" class="btn btn-primary"
-                  ><i class="fas fa-shopping-cart"></i> Adquirir</a
+                <a href="Infor.aspx" class="btn btn-primary"
+                  ><i class="fas fa-plus"></i> Adquirir</a
                 >
               </div>
             </div>
@@ -91,8 +91,8 @@
               <div class="card-body">
                 <h5 class="card-title">Nombre Prod</h5>
                 <p class="card-text">Breve descripción</p>
-                <a href="#" class="btn btn-primary"
-                  ><i class="fas fa-shopping-cart"></i> Adquirir</a
+                <a href="Infor.aspx" class="btn btn-primary"
+                  ><i class="fas fa-plus"></i> Adquirir</a
                 >
               </div>
             </div>
@@ -113,8 +113,8 @@
               <div class="card-body">
                 <h5 class="card-title">Nombre Prod</h5>
                 <p class="card-text">Breve descripción</p>
-                <a href="#" class="btn btn-primary"
-                  ><i class="fas fa-shopping-cart"></i> Adquirir</a
+                <a href="Infor.aspx" class="btn btn-primary"
+                  ><i class="fas fa-plus"></i> Adquirir</a
                 >
               </div>
             </div>
@@ -129,8 +129,8 @@
               <div class="card-body">
                 <h5 class="card-title">Nombre Prod</h5>
                 <p class="card-text">Breve descripción</p>
-                <a href="#" class="btn btn-primary"
-                  ><i class="fas fa-shopping-cart"></i> Adquirir</a
+                <a href="Infor.aspx" class="btn btn-primary"
+                  ><i class="fas fa-plus"></i> Adquirir</a
                 >
               </div>
             </div>
@@ -145,8 +145,8 @@
               <div class="card-body">
                 <h5 class="card-title">Nombre Prod</h5>
                 <p class="card-text">Breve descripción</p>
-                <a href="#" class="btn btn-primary"
-                  ><i class="fas fa-shopping-cart"></i> Adquirir</a
+                <a href="Infor.aspx" class="btn btn-primary"
+                  ><i class="fas fa-plus"></i> Adquirir</a
                 >
               </div>
             </div>

@@ -72,11 +72,13 @@
     <Content Include="Mantenimientos\Accesorios.aspx" />
     <Content Include="Mantenimientos\Cabeza.aspx" />
     <Content Include="Mantenimientos\Calzado.aspx" />
+    <Content Include="Mantenimientos\css\infor.css" />
     <Content Include="Mantenimientos\css\principal.css" />
     <Content Include="Mantenimientos\images\img_lights_wide.jpg" />
     <Content Include="Mantenimientos\images\img_mountains_wide.jpg" />
     <Content Include="Mantenimientos\images\img_nature_wide.jpg" />
     <Content Include="Mantenimientos\images\img_snow_wide.jpg" />
+    <Content Include="Mantenimientos\Infor.aspx" />
     <Content Include="Mantenimientos\Inicio.aspx" />
     <Content Include="Mantenimientos\ParteInferior.aspx" />
     <Content Include="Mantenimientos\ParteSuperior.aspx" />
@@ -110,6 +112,13 @@
     </Compile>
     <Compile Include="Mantenimientos\Calzado.aspx.designer.cs">
       <DependentUpon>Calzado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Infor.aspx.cs">
+      <DependentUpon>Infor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Infor.aspx.designer.cs">
+      <DependentUpon>Infor.aspx</DependentUpon>
     </Compile>
     <Compile Include="Mantenimientos\Inicio.aspx.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
