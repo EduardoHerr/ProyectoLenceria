@@ -3,7 +3,7 @@
       
          <div class="sliderimage">
         <div class="slihijo" style="width: 100%;color: white; height: 55vh;">
-       <%--   <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+          <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -41,43 +41,8 @@
               <span class="visually-hidden">Next</span>
             </button>
           
-        </div>--%>
-             <!-- Slideshow container -->
-<div class="slideshow-container">
-
-  <!-- Full-width images with number and caption text -->
-  <div class="mySlides fade">
-    <div class="numbertext">1 / 3</div>
-    <img src="images/img_lights_wide.jpg" style="width:100%">
-    <div class="text">Caption Text</div>
-  </div>
-
-  <div class="mySlides fade">
-    <div class="numbertext">2 / 3</div>
-    <img src="images/img_mountains_wide.jpg" style="width:100%">
-    <div class="text">Caption Two</div>
-  </div>
-
-  <div class="mySlides fade">
-    <div class="numbertext">3 / 3</div>
-    <img src="images/img_nature_wide.jpg" style="width:100%">
-    <div class="text">Caption Three</div>
-  </div>
-
-  <!-- Next and previous buttons -->
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-</div>
-<br>
-
-<!-- The dots/circles -->
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
-</div>
-      </div>
-             </div>
+        </div>
+             
       
       <!--Grid-->
       <!--Columna1-->
