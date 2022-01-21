@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="LenceryDB" Class="connectDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost;Initial Catalog=LenceryDB;Integrated Security=True" SettingsObjectName="Capa_Datos.Properties.Settings" SettingsPropertyName="LenceryDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tblCategoria" Member="tblCategoria">
+    <Type Name="tblCategoria">
+      <Column Name="catId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="catNombreCategoria" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="catEstado" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Association Name="tblCategoria_tblProducto" Member="tblProducto" ThisKey="catId" OtherKey="catId" Type="tblProducto" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblVenta" Member="tblVenta">
+    <Type Name="tblVenta">
+      <Column Name="venId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="venCodigo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="venFechaVen" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="venCantidad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="venCapital" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="cliId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="proId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tblCliente_tblVenta" Member="tblCliente" ThisKey="cliId" OtherKey="cliId" Type="tblCliente" IsForeignKey="true" />
+      <Association Name="tblProducto_tblVenta" Member="tblProducto" ThisKey="proId" OtherKey="proId" Type="tblProducto" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblCliente" Member="tblCliente">
+    <Type Name="tblCliente">
+      <Column Name="cliId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="cliNombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="cliApellido" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="cliCorreo" Type="System.String" DbType="VarChar(75)" CanBeNull="true" />
+      <Column Name="cliLog" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="cliClave" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="cliDireccion" Type="System.String" DbType="VarChar(75)" CanBeNull="true" />
+      <Column Name="cliTelf" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="cliCi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="cliGenero" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="cliEstado" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Association Name="tblCliente_tblVenta" Member="tblVenta" ThisKey="cliId" OtherKey="cliId" Type="tblVenta" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblCompra" Member="tblCompra">
+    <Type Name="tblCompra">
+      <Column Name="comId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="comCodigo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="comFechaCompra" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="comCantidad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="comCapital" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="provId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="proId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tblProducto_tblCompra" Member="tblProducto" ThisKey="proId" OtherKey="proId" Type="tblProducto" IsForeignKey="true" />
+      <Association Name="tblProveedor_tblCompra" Member="tblProveedor" ThisKey="provId" OtherKey="provId" Type="tblProveedor" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblProducto" Member="tblProducto">
+    <Type Name="tblProducto">
+      <Column Name="proId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="proNombre" Type="System.String" DbType="VarChar(75)" CanBeNull="true" />
+      <Column Name="proMarca" Type="System.String" DbType="VarChar(75)" CanBeNull="true" />
+      <Column Name="proTalla" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="proColor" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="proPrecio" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="proCantidad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="proArte" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="proTituloArte" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="proEstado" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="catId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tblProducto_tblVenta" Member="tblVenta" ThisKey="proId" OtherKey="proId" Type="tblVenta" />
+      <Association Name="tblProducto_tblCompra" Member="tblCompra" ThisKey="proId" OtherKey="proId" Type="tblCompra" />
+      <Association Name="tblCategoria_tblProducto" Member="tblCategoria" ThisKey="catId" OtherKey="catId" Type="tblCategoria" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblProveedor" Member="tblProveedor">
+    <Type Name="tblProveedor">
+      <Column Name="provId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="provNombreEmpresa" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="provRuc" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="provCorresponsal" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="provCorreo" Type="System.String" DbType="VarChar(75)" CanBeNull="true" />
+      <Column Name="provDireccion" Type="System.String" DbType="VarChar(75)" CanBeNull="true" />
+      <Column Name="provEstado" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Association Name="tblProveedor_tblCompra" Member="tblCompra" ThisKey="provId" OtherKey="provId" Type="tblCompra" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblTipoUs" Member="tblTipoUs">
+    <Type Name="tblTipoUs">
+      <Column Name="tusuId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tusuRol" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="tblTipoUs_tblUsuario" Member="tblUsuario" ThisKey="tusuId" OtherKey="tusuId" Type="tblUsuario" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblUsuario" Member="tblUsuario">
+    <Type Name="tblUsuario">
+      <Column Name="usId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="usNombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="usApellido" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="usCorreo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="usLog" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="usClave" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="usCedula" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="usDireccion" Type="System.String" DbType="VarChar(75)" CanBeNull="true" />
+      <Column Name="usTelefono" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="usEstado" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="tusuId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tblTipoUs_tblUsuario" Member="tblTipoUs" ThisKey="tusuId" OtherKey="tusuId" Type="tblTipoUs" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

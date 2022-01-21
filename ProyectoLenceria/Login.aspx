@@ -26,34 +26,36 @@
               <div class="col">Usuario:</div>
               <div class="col">
                 
-                  <asp:TextBox ID="txtCi" runat="server" placeholder="Ingrese su Cedula" CssClass="inp" ></asp:TextBox>
+                  <asp:TextBox ID="txtlog" runat="server" placeholder="Ingrese su Cedula" CssClass="inp" ></asp:TextBox>
               </div>
             </div>
           </div>
-          <br>
+          <br/>
           <div class="container">
             <div class="row">
               <div class="col">Clave:</div>
               <div class="col">
-                <input type="password" placeholder="Ingrese su Contraseña" class="inp" />
+                  <asp:TextBox ID="txtPassword" placeholder="Ingrese su Contraseña" cssClass="inp" runat="server"></asp:TextBox>
+                
               </div>
             </div>
           </div>
-          <br>
-          <center>
-              <input type="submit" value="Ingresar" class="sub">
-          </center>
-          <hr>
+          <br/>
           <center>
               
-              <a><i class="fas fa-user-shield"></i><asp:Button ID="Button1" runat="server" CssClass="sub" Text=" Ingresar como Colaborador" /></a>
+              <asp:Button ID="btnIngreso" runat="server" Text="Ingresar" OnClick="btnIngreso_Click" CssClass="sub" />
+          </center>
+          <hr/>
+          <center>
+              
+             <asp:Button ID="btnColaborador" runat="server" CssClass="sub" OnClick="btnColaborador_Click" Text=" Ingresar como Colaborador" />
           </center>
         </div>
       </div>
-    </div>
-    
-    
-        </div>
+                <asp:Label ID="lblMensaje" runat="server" Text=""></asp:Label>
+
+            </div>
+                    </div>
     </form>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

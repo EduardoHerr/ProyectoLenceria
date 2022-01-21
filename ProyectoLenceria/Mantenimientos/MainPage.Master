@@ -20,22 +20,33 @@
   <body>
     <div class="topnav">
       <a class="active"><i class="fas fa-circle-notch"></i> OnixCloth</a>
-      <div class="topnav-right">
-        <a href="#search"><i class="fas fa-lock"></i> Login</a>
-        <a href="#about"><i class="fas fa-sign-out-alt"></i> Salir</a>
-      </div>
+     
     </div>
     <div class="sidebar">
+        <form runat="server">
+        <asp:Panel ID="pnlUser" runat="server">
       <a href="Inicio.aspx"><i class="far fa-star"></i> Lo más Destacado</a>
       <a href="Cabeza.aspx"><i class="fas fa-hat-cowboy"></i> Cabeza</a>
       <a href="ParteSuperior.aspx"><i class="fas fa-tshirt"></i> Parte Superior</a>
       <a href="ParteInferior.aspx"><i class="fas fa-socks"></i> Parte Inferior</a>
       <a href="Accesorios.aspx"><i class="fas fa-glasses"></i> Accesorios</a>
       <a href="Cabeza.aspx"><i class="fas fa-shoe-prints"></i> Calzado</a>
+            </asp:Panel>
+            <hr />
+        <asp:Panel ID="pnlAdmin" runat="server">
+        <label><i class="fas fa-cogs"></i> Mantenimiento</label>
+            
+            <asp:DropDownList ID="ddlLista" CssClass="form-control"  AutoPostBack="true" OnSelectedIndexChanged="ddlLista_SelectedIndexChanged"  runat="server">
+                
+            </asp:DropDownList>
+        </asp:Panel>
+            <hr />
     </div>
-    <form runat="server">
+    
+       
         <!--Contenido Principal-->
         <div class="content">
+             <asp:LinkButton ID="lnkSalir" CssClass="btn btn-dark" OnClick="lnkSalir_Click" runat="server">Salir</asp:LinkButton>
             <h1>
             <asp:Label ID="lblSaludo" runat="server" Text=""></asp:Label>
                 </h1>

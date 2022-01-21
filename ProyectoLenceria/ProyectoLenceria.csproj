@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Mantenimientos\MantenimientoCabeza.aspx" />
     <Content Include="css\login.css" />
     <Content Include="Login.aspx" />
     <Content Include="Mantenimientos\Accesorios.aspx" />
@@ -85,6 +86,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Mantenimientos\MantenimientoCabeza.aspx.cs">
+      <DependentUpon>MantenimientoCabeza.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\MantenimientoCabeza.aspx.designer.cs">
+      <DependentUpon>MantenimientoCabeza.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -162,6 +170,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Mantenimientos\img\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Capa Datos\Capa Datos.csproj">
+      <Project>{ca5e575c-4afb-432a-8f76-23cf847ec59a}</Project>
+      <Name>Capa Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Capa Negocio\Capa Negocio.csproj">
+      <Project>{fbfae0be-1210-44c7-ad68-a38a69e04425}</Project>
+      <Name>Capa Negocio</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
