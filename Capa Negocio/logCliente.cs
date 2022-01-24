@@ -28,5 +28,6 @@ namespace Capa_Negocio
         }
 
 
+
     }
 }

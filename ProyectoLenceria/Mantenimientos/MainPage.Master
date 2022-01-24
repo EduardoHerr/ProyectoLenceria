@@ -30,15 +30,17 @@
       <a href="ParteSuperior.aspx"><i class="fas fa-tshirt"></i> Parte Superior</a>
       <a href="ParteInferior.aspx"><i class="fas fa-socks"></i> Parte Inferior</a>
       <a href="Accesorios.aspx"><i class="fas fa-glasses"></i> Accesorios</a>
-      <a href="Cabeza.aspx"><i class="fas fa-shoe-prints"></i> Calzado</a>
+      <a href="Calzado.aspx"><i class="fas fa-shoe-prints"></i> Calzado</a>
             </asp:Panel>
             <hr />
         <asp:Panel ID="pnlAdmin" runat="server">
+            <div class="admin">
         <label><i class="fas fa-cogs"></i> Mantenimiento</label>
             
-            <asp:DropDownList ID="ddlLista" CssClass="form-control"  AutoPostBack="true" OnSelectedIndexChanged="ddlLista_SelectedIndexChanged"  runat="server">
+            <asp:DropDownList ID="ddlLista" CssClass="form-select"  AutoPostBack="true" OnSelectedIndexChanged="ddlLista_SelectedIndexChanged"  runat="server">
                 
             </asp:DropDownList>
+                </div>
         </asp:Panel>
             <hr />
     </div>
@@ -46,12 +48,16 @@
        
         <!--Contenido Principal-->
         <div class="content">
-             <asp:LinkButton ID="lnkSalir" CssClass="btn btn-dark" OnClick="lnkSalir_Click" runat="server">Salir</asp:LinkButton>
+             
             <h1>
-            <asp:Label ID="lblSaludo" runat="server" Text=""></asp:Label>
-                </h1>
+                <asp:Label ID="lblSaludo" runat="server" Text=""></asp:Label>
+            </h1>
+            
+            <asp:LinkButton ID="lnkSalir" CssClass="btn btn-dark" OnClick="lnkSalir_Click" runat="server">Salir</asp:LinkButton>
             <hr />
+            
             <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server"></asp:ContentPlaceHolder>
+                    
         </div>
     </form>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>

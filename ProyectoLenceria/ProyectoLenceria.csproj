@@ -44,6 +44,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -67,7 +68,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Mantenimientos\MantenimientoCabeza.aspx" />
+    <Content Include="Mantenimientos\css\compras.css" />
+    <Content Include="Mantenimientos\css\nuevoUsuario.css" />
     <Content Include="css\login.css" />
     <Content Include="Login.aspx" />
     <Content Include="Mantenimientos\Accesorios.aspx" />
@@ -75,24 +77,26 @@
     <Content Include="Mantenimientos\Calzado.aspx" />
     <Content Include="Mantenimientos\css\infor.css" />
     <Content Include="Mantenimientos\css\principal.css" />
+    <Content Include="Mantenimientos\images\bn1.png" />
+    <Content Include="Mantenimientos\images\bn2.jpg" />
+    <Content Include="Mantenimientos\images\bn3.jpg" />
+    <Content Include="Mantenimientos\images\imagen.png" />
     <Content Include="Mantenimientos\images\img_lights_wide.jpg" />
     <Content Include="Mantenimientos\images\img_mountains_wide.jpg" />
     <Content Include="Mantenimientos\images\img_nature_wide.jpg" />
     <Content Include="Mantenimientos\images\img_snow_wide.jpg" />
     <Content Include="Mantenimientos\Infor.aspx" />
     <Content Include="Mantenimientos\Inicio.aspx" />
+    <Content Include="Mantenimientos\Mantenimientos.aspx" />
+    <Content Include="Mantenimientos\MatenimientoUsuarios.aspx" />
+    <Content Include="Mantenimientos\NuevoProducto.aspx" />
+    <Content Include="Mantenimientos\NuevoUsuario.aspx" />
     <Content Include="Mantenimientos\ParteInferior.aspx" />
     <Content Include="Mantenimientos\ParteSuperior.aspx" />
+    <Content Include="Mantenimientos\webCompras.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Mantenimientos\MantenimientoCabeza.aspx.cs">
-      <DependentUpon>MantenimientoCabeza.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Mantenimientos\MantenimientoCabeza.aspx.designer.cs">
-      <DependentUpon>MantenimientoCabeza.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -142,6 +146,34 @@
     <Compile Include="Mantenimientos\MainPage.Master.designer.cs">
       <DependentUpon>MainPage.Master</DependentUpon>
     </Compile>
+    <Compile Include="Mantenimientos\Mantenimientos.aspx.cs">
+      <DependentUpon>Mantenimientos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Mantenimientos.aspx.designer.cs">
+      <DependentUpon>Mantenimientos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\MatenimientoUsuarios.aspx.cs">
+      <DependentUpon>MatenimientoUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\MatenimientoUsuarios.aspx.designer.cs">
+      <DependentUpon>MatenimientoUsuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\NuevoProducto.aspx.cs">
+      <DependentUpon>NuevoProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\NuevoProducto.aspx.designer.cs">
+      <DependentUpon>NuevoProducto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\NuevoUsuario.aspx.cs">
+      <DependentUpon>NuevoUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\NuevoUsuario.aspx.designer.cs">
+      <DependentUpon>NuevoUsuario.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Mantenimientos\ParteInferior.aspx.cs">
       <DependentUpon>ParteInferior.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -156,6 +188,13 @@
     <Compile Include="Mantenimientos\ParteSuperior.aspx.designer.cs">
       <DependentUpon>ParteSuperior.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Mantenimientos\webCompras.aspx.cs">
+      <DependentUpon>webCompras.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\webCompras.aspx.designer.cs">
+      <DependentUpon>webCompras.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -168,9 +207,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Mantenimientos\img\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Capa Datos\Capa Datos.csproj">
       <Project>{ca5e575c-4afb-432a-8f76-23cf847ec59a}</Project>

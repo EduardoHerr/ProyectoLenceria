@@ -11,7 +11,6 @@
   <Table Name="dbo.tblVenta" Member="tblVenta">
     <Type Name="tblVenta">
       <Column Name="venId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="venCodigo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="venFechaVen" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="venCantidad" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="venCapital" Type="System.Double" DbType="Float" CanBeNull="true" />
@@ -61,6 +60,7 @@
       <Column Name="proCantidad" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="proArte" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
       <Column Name="proTituloArte" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="proArteNom" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="proEstado" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
       <Column Name="catId" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="tblProducto_tblVenta" Member="tblVenta" ThisKey="proId" OtherKey="proId" Type="tblVenta" />

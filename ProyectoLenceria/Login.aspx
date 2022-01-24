@@ -20,13 +20,13 @@
             <div class="containeer">
       <div class="center">
         <div class="log">
-          <h1>Inicio de Sesion</h1>
+          <h1>Inicio de Sesión</h1>
           <div class="container">
             <div class="row">
               <div class="col">Usuario:</div>
               <div class="col">
                 
-                  <asp:TextBox ID="txtlog" runat="server" placeholder="Ingrese su Cedula" CssClass="inp" ></asp:TextBox>
+                  <asp:TextBox ID="txtlog" runat="server" placeholder="Ingrese su User" CssClass="inp" ></asp:TextBox>
               </div>
             </div>
           </div>

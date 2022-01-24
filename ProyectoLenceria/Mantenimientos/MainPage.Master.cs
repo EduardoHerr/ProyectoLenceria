@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Capa_Datos;
+using Capa_Negocio;
 
 namespace ProyectoLenceria.Mantenimientos
 {
@@ -29,6 +31,12 @@ namespace ProyectoLenceria.Mantenimientos
                     if (Session["nombre"]!=null)
                     {
                         nombre = Session["nombre"].ToString();
+                        tblUsuario us = new tblUsuario();
+                        us = logUsuario.obtenerxNom(nombre);
+                        if (us!=null)
+                        {
+                            Session["id"] = us.usId.ToString();
+                        }
                     }
                     else
                     {
@@ -60,6 +68,10 @@ namespace ProyectoLenceria.Mantenimientos
             i = new ListItem("Accesorios", "5");
             ddlLista.Items.Add(i);
             i = new ListItem("Calzado", "6");
+            ddlLista.Items.Add(i);
+            i = new ListItem("Usuarios", "7");
+            ddlLista.Items.Add(i);
+            i = new ListItem("Clientes", "8");
             ddlLista.Items.Add(i);
         }
 
@@ -99,7 +111,38 @@ namespace ProyectoLenceria.Mantenimientos
             {
                 if (pag==1)
                 {
-                    Response.Redirect("~/Mantenimientos/MantenimientoCabeza.aspx");
+                    Session["cat"] = "1";
+                    Response.Redirect("~/Mantenimientos/Mantenimientos.aspx");
+                }
+                else if (pag==2)
+                {
+                    Session["cat"] = "2";
+                    Response.Redirect("~/Mantenimientos/Mantenimientos.aspx");
+                }
+                else if(pag==3)
+                {
+                    Session["cat"] = "3";
+                    Response.Redirect("~/Mantenimientos/Mantenimientos.aspx");
+                }
+                else if (pag == 4)
+                {
+                    Session["cat"] = "4";
+                    Response.Redirect("~/Mantenimientos/Mantenimientos.aspx");
+                }
+                else if (pag == 5)
+                {
+                    Session["cat"] = "5";
+                    Response.Redirect("~/Mantenimientos/Mantenimientos.aspx");
+                }
+                else if (pag == 6)
+                {
+                    
+                    Response.Redirect("~/Mantenimientos/MatenimientoUsuarios.aspx");
+                }
+                else if (pag == 7)
+                {
+
+                    Response.Write("<script>alert('Hola XD');</script>");
                 }
             }
         }

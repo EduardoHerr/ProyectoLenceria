@@ -297,8 +297,6 @@ namespace Capa_Datos
 		
 		private int _venId;
 		
-		private string _venCodigo;
-		
 		private System.Nullable<System.DateTime> _venFechaVen;
 		
 		private System.Nullable<int> _venCantidad;
@@ -319,8 +317,6 @@ namespace Capa_Datos
     partial void OnCreated();
     partial void OnvenIdChanging(int value);
     partial void OnvenIdChanged();
-    partial void OnvenCodigoChanging(string value);
-    partial void OnvenCodigoChanged();
     partial void OnvenFechaVenChanging(System.Nullable<System.DateTime> value);
     partial void OnvenFechaVenChanged();
     partial void OnvenCantidadChanging(System.Nullable<int> value);
@@ -356,26 +352,6 @@ namespace Capa_Datos
 					this._venId = value;
 					this.SendPropertyChanged("venId");
 					this.OnvenIdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_venCodigo", DbType="VarChar(50)")]
-		public string venCodigo
-		{
-			get
-			{
-				return this._venCodigo;
-			}
-			set
-			{
-				if ((this._venCodigo != value))
-				{
-					this.OnvenCodigoChanging(value);
-					this.SendPropertyChanging();
-					this._venCodigo = value;
-					this.SendPropertyChanged("venCodigo");
-					this.OnvenCodigoChanged();
 				}
 			}
 		}
@@ -1219,6 +1195,8 @@ namespace Capa_Datos
 		
 		private string _proTituloArte;
 		
+		private string _proArteNom;
+		
 		private System.Nullable<char> _proEstado;
 		
 		private System.Nullable<int> _catId;
@@ -1251,6 +1229,8 @@ namespace Capa_Datos
     partial void OnproArteChanged();
     partial void OnproTituloArteChanging(string value);
     partial void OnproTituloArteChanged();
+    partial void OnproArteNomChanging(string value);
+    partial void OnproArteNomChanged();
     partial void OnproEstadoChanging(System.Nullable<char> value);
     partial void OnproEstadoChanged();
     partial void OncatIdChanging(System.Nullable<int> value);
@@ -1405,7 +1385,7 @@ namespace Capa_Datos
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_proArte", DbType="Image", CanBeNull=true, UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_proArte", DbType="Image", UpdateCheck=UpdateCheck.Never)]
 		public System.Data.Linq.Binary proArte
 		{
 			get
@@ -1441,6 +1421,26 @@ namespace Capa_Datos
 					this._proTituloArte = value;
 					this.SendPropertyChanged("proTituloArte");
 					this.OnproTituloArteChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_proArteNom", DbType="VarChar(50)")]
+		public string proArteNom
+		{
+			get
+			{
+				return this._proArteNom;
+			}
+			set
+			{
+				if ((this._proArteNom != value))
+				{
+					this.OnproArteNomChanging(value);
+					this.SendPropertyChanging();
+					this._proArteNom = value;
+					this.SendPropertyChanged("proArteNom");
+					this.OnproArteNomChanged();
 				}
 			}
 		}

@@ -30,5 +30,32 @@ namespace Capa_Negocio
             return rs;
         }
 
+        public static tblUsuario obtenerxNom(string nombre)
+        {
+            var usNom = db.tblUsuario.FirstOrDefault(pro => pro.usLog.Equals(nombre) && pro.usEstado == 'A');
+            return usNom;
+        }
+        public static List<tblUsuario> obtenerUsuario()
+        {
+            var rs = db.tblUsuario.Where(x => x.usEstado == 'A');
+            
+            return rs.ToList();
+        }
+
+        public static void registrarUsuario(tblUsuario us)
+        {
+            try
+            {
+                us.usEstado = 'A';
+                db.tblUsuario.InsertOnSubmit(us);
+                db.SubmitChanges();
+            }
+            catch (Exception ex)
+            {
+
+                throw new ArgumentException("Datos no Guardados: " + ex.Message);
+            }
+        }
+
     }
 }
