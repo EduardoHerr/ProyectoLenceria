@@ -35,7 +35,7 @@
             <div class="row">
               <div class="col">Clave:</div>
               <div class="col">
-                  <asp:TextBox ID="txtPassword" placeholder="Ingrese su Contraseña" cssClass="inp" runat="server"></asp:TextBox>
+                  <asp:TextBox ID="txtPassword" TextMode="Password" placeholder="Ingrese su Contraseña" cssClass="inp" runat="server"></asp:TextBox>
                 
               </div>
             </div>
