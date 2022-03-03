@@ -23,7 +23,7 @@ namespace ProyectoLenceria.Mantenimientos
         {
             SqlConnection con = new SqlConnection("Data Source=localhost;Initial Catalog=LenceryDB;Integrated Security=True");
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT * FROM tblProducto   ORDER BY proID ASC ";
+            cmd.CommandText = "SELECT * FROM tblProducto  where  proEstado='A'  ORDER BY proID ASC ";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con;
 

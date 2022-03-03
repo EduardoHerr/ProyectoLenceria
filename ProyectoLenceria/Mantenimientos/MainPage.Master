@@ -41,6 +41,8 @@
                 
             </asp:DropDownList>
                 </div>
+            <br />
+            <a href="QR.aspx"><i class="fas fa-qrcode"></i> Generar QR</a>
         </asp:Panel>
             <hr />
     </div>

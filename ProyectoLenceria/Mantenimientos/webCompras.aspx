@@ -20,7 +20,10 @@
                                 <asp:Label ID="lblPrecio" runat="server" Text=""></asp:Label>
                                 <br />
                                 
-                                <asp:TextBox ID="txtCantidad"  runat="server" TextMode="Number" CssClass="form-control">0</asp:TextBox>
+                                <asp:TextBox ID="txtCantidad"  runat="server" TextMode="Number"   CssClass="form-control" min="1" >1</asp:TextBox>
+                                
+                                
+                                
                                 <br />
                                 <asp:Button ID="btnCalcula" runat="server" Text="Calcular" CssClass="btn btn-success"  OnClick="btnCalcula_Click"/>
                                 <asp:LinkButton ID="lnkComprar" runat="server"  CssClass="btn btn-outline-success" OnClick="lnkComprar_Click">Comprar</asp:LinkButton>

@@ -50,10 +50,12 @@
               
              <asp:Button ID="btnColaborador" runat="server" CssClass="sub" OnClick="btnColaborador_Click" Text=" Ingresar como Colaborador" />
           </center>
+            <asp:LinkButton ID="linkRecuperar" CssClass="lnk" runat="server">Recuperar Contraseña...</asp:LinkButton>
         </div>
-      </div>
-                <asp:Label ID="lblMensaje" runat="server" Text=""></asp:Label>
-
+      </div >
+                
+                <asp:Label ID="lblMensaje"  runat="server" Text=""></asp:Label>
+                    
             </div>
                     </div>
     </form>

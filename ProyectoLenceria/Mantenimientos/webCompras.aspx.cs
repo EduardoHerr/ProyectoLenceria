@@ -90,18 +90,27 @@ namespace ProyectoLenceria.Mantenimientos
 
         protected void btnCalcula_Click(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(txtCantidad.Text)>= pro.proCantidad)
+            if (int.TryParse(txtCantidad.Text,out int num))
             {
-                lblMensaje.ForeColor = Color.Red;
-                lblMensaje.Text = "No disponible en stock";
+                if (Convert.ToInt32(txtCantidad.Text) >= pro.proCantidad)
+                {
+                    lblMensaje.ForeColor = Color.Red;
+                    lblMensaje.Text = "No disponible en stock";
+                    txtCantidad.Text = "1";
+                }
+                else
+                {
+                    cant = Convert.ToInt32(txtCantidad.Text);
+                    c = cant * precio;
+                    lblMensaje.Text = c.ToString();
+                    lnkComprar.Visible = true;
+                }
             }
             else
             {
-                cant = Convert.ToInt32(txtCantidad.Text);
-                 c = cant * precio;
-                lblMensaje.Text = c.ToString();
-                lnkComprar.Visible = true;
+                lblMensaje.Text = "Dato ingresado no valido";
             }
+            
         }
 
         void limpiar()
@@ -136,6 +145,7 @@ namespace ProyectoLenceria.Mantenimientos
 
         void resta()
         {
+            
             pro = logProductos.obtenerxID(producto);
             if (pro!=null)
             {
@@ -150,6 +160,9 @@ namespace ProyectoLenceria.Mantenimientos
         protected void lnkComprar_Click(object sender, EventArgs e)
         {
             guardar();
+
         }
+
+        
     }
 }

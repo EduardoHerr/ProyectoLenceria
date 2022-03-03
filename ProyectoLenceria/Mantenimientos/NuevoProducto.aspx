@@ -2,9 +2,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <link rel="stylesheet" type="text/css" href="css/nuevoUsuario.css" />
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+    <center>
     <h4>
-        <asp:Label ID="lblMensaje" runat="server" Text="Registro de Usuarios"></asp:Label>
+        <asp:Label ID="lblMensaje" runat="server" Text="Registro de Productos"></asp:Label>
     </h4>
+        </center>
     <br />
 
     <div class="centrar"> 
@@ -30,7 +32,7 @@
     </div>
         <div class="form-group">
         <asp:Label ID="Label5" runat="server" Text="Cantidad" CssClass="form-control"></asp:Label>
-        <asp:TextBox ID="txtCantidad" runat="server" TextMode="Number" CssClass="form-control"></asp:TextBox>
+        <asp:TextBox ID="txtCantidad" runat="server" min="1" TextMode="Number" CssClass="form-control">1</asp:TextBox>
     </div>
         <div class="form-group">
         <asp:Label ID="Label6" runat="server" Text="Categoria" CssClass="form-control"></asp:Label>

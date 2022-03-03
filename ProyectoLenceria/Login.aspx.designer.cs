@@ -60,6 +60,15 @@ namespace ProyectoLenceria
         protected global::System.Web.UI.WebControls.Button btnColaborador;
 
         /// <summary>
+        /// Control linkRecuperar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton linkRecuperar;
+
+        /// <summary>
         /// Control lblMensaje.
         /// </summary>
         /// <remarks>

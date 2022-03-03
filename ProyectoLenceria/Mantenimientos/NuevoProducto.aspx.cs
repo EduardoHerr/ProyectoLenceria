@@ -175,65 +175,83 @@ namespace ProyectoLenceria.Mantenimientos
 
         void guardar()
         {
-            try
+            if (string.IsNullOrEmpty(txtCantidad.Text)|| string.IsNullOrEmpty(txtColor.Text) || string.IsNullOrEmpty(txtMarca.Text) || string.IsNullOrEmpty(txtNombre.Text) || string.IsNullOrEmpty(txtPrecio.Text) || string.IsNullOrEmpty(txtTalla.Text))
             {
-                lblMensaje.Text = "";
-
-                prodinfo = new tblProducto();
-
-                prodinfo.proArteNom = txtNombreArchivo.Text;
-                prodinfo.proNombre = txtNombre.Text;
-                prodinfo.proMarca = txtMarca.Text;
-                prodinfo.proTalla = txtTalla.Text;
-                prodinfo.proColor = txtColor.Text;
-                prodinfo.proPrecio = Convert.ToDouble(txtPrecio.Text);
-                prodinfo.proCantidad =Convert.ToInt32( txtCantidad.Text);
-                prodinfo.catId = ddlCategoria.SelectedIndex;
-                if (flu1.HasFile)
+                lblMensaje.ForeColor = Color.Red;
+                lblMensaje.Text = "Campo Vacio";
+            }
+            else
+            {
+                if (string.IsNullOrWhiteSpace(txtCantidad.Text) || string.IsNullOrWhiteSpace(txtColor.Text) || string.IsNullOrWhiteSpace(txtMarca.Text) || string.IsNullOrWhiteSpace(txtNombre.Text) || string.IsNullOrWhiteSpace(txtPrecio.Text) || string.IsNullOrWhiteSpace(txtTalla.Text))
                 {
-                    prodinfo.proTituloArte = flu1.FileName;
-                    #region CargarImagen
-                    //Funcion para devolver el tamaño de la imagen
-                    int tamanio = flu1.PostedFile.ContentLength;
-                    //array de bytes
-                    byte[] imageNew = new byte[tamanio];
-                    //Leer la imagen original
-                    flu1.PostedFile.InputStream.Read(imageNew, 0, tamanio);
-
-                    Bitmap imageOriginalBinaria = new Bitmap(flu1.PostedFile.InputStream);
-                    #endregion
-
-                    #region imgThumbnail
-                    System.Drawing.Image imgt;
-                    int tamaniot = 200;
-                    imgt = Redimencion(imageOriginalBinaria, tamaniot);
-                    byte[] bImageOriginal = new byte[tamaniot];
-                    ImageConverter Convertidor = new ImageConverter();
-                    bImageOriginal = (byte[])Convertidor.ConvertTo(imgt, typeof(byte[]));
-                    #endregion
-
-                    prodinfo.proArte = bImageOriginal;
-
-                    logProductos.guardarProd(prodinfo);
-                    lblMensaje.Text = "Datos Guardados ";
-
-                    string imagendat = "data:image/jpeg;base64," + Convert.ToBase64String(bImageOriginal);
-                    Image1.ImageUrl = imagendat;
+                    lblMensaje.ForeColor = Color.Red;
+                    lblMensaje.Text = "Espacio en Blanco";
                 }
                 else
                 {
-                    lblMensaje.ForeColor = Color.Red;
-                    lblMensaje.Text = "No se ha cargado Imagen";
+                    try
+                    {
+                        lblMensaje.Text = "";
+
+                        prodinfo = new tblProducto();
+
+                        prodinfo.proArteNom = txtNombreArchivo.Text;
+                        prodinfo.proNombre = txtNombre.Text;
+                        prodinfo.proMarca = txtMarca.Text;
+                        prodinfo.proTalla = txtTalla.Text;
+                        prodinfo.proColor = txtColor.Text;
+                        prodinfo.proPrecio = Convert.ToDouble(txtPrecio.Text);
+                        prodinfo.proCantidad = Convert.ToInt32(txtCantidad.Text);
+                        prodinfo.catId = ddlCategoria.SelectedIndex;
+                        if (flu1.HasFile)
+                        {
+                            prodinfo.proTituloArte = flu1.FileName;
+                            #region CargarImagen
+                            //Funcion para devolver el tamaño de la imagen
+                            int tamanio = flu1.PostedFile.ContentLength;
+                            //array de bytes
+                            byte[] imageNew = new byte[tamanio];
+                            //Leer la imagen original
+                            flu1.PostedFile.InputStream.Read(imageNew, 0, tamanio);
+
+                            Bitmap imageOriginalBinaria = new Bitmap(flu1.PostedFile.InputStream);
+                            #endregion
+
+                            #region imgThumbnail
+                            System.Drawing.Image imgt;
+                            int tamaniot = 200;
+                            imgt = Redimencion(imageOriginalBinaria, tamaniot);
+                            byte[] bImageOriginal = new byte[tamaniot];
+                            ImageConverter Convertidor = new ImageConverter();
+                            bImageOriginal = (byte[])Convertidor.ConvertTo(imgt, typeof(byte[]));
+                            #endregion
+
+                            prodinfo.proArte = bImageOriginal;
+
+                            logProductos.guardarProd(prodinfo);
+                            lblMensaje.ForeColor = Color.Green;
+                            lblMensaje.Text = "Datos Guardados ";
+
+                            string imagendat = "data:image/jpeg;base64," + Convert.ToBase64String(bImageOriginal);
+                            Image1.ImageUrl = imagendat;
+                        }
+                        else
+                        {
+                            lblMensaje.ForeColor = Color.Red;
+                            lblMensaje.Text = "No se ha cargado Imagen";
+                        }
+
+
+
+                    }
+                    catch (Exception ex)
+                    {
+
+                        throw new ArgumentException("No se Modifico: " + ex.Message);
+                    }
                 }
-
-
-
             }
-            catch (Exception ex)
-            {
-
-                throw new ArgumentException("No se Modifico: " + ex.Message);
-            }
+            
         }
         public System.Drawing.Image Redimencion(System.Drawing.Image imageOriginal, int Alto)
         {

@@ -43,6 +43,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MessagingToolkit.QRCode, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MessagingToolkit.QRCode.1.3.0\lib\MessagingToolkit.QRCode.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Web.DynamicData" />
@@ -85,6 +88,7 @@
     <Content Include="Mantenimientos\images\img_mountains_wide.jpg" />
     <Content Include="Mantenimientos\images\img_nature_wide.jpg" />
     <Content Include="Mantenimientos\images\img_snow_wide.jpg" />
+    <Content Include="Mantenimientos\images\qr.jpg" />
     <Content Include="Mantenimientos\Infor.aspx" />
     <Content Include="Mantenimientos\Inicio.aspx" />
     <Content Include="Mantenimientos\Mantenimientos.aspx" />
@@ -93,7 +97,9 @@
     <Content Include="Mantenimientos\NuevoUsuario.aspx" />
     <Content Include="Mantenimientos\ParteInferior.aspx" />
     <Content Include="Mantenimientos\ParteSuperior.aspx" />
+    <Content Include="Mantenimientos\QR.aspx" />
     <Content Include="Mantenimientos\webCompras.aspx" />
+    <Content Include="Recuperar.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -188,6 +194,13 @@
     <Compile Include="Mantenimientos\ParteSuperior.aspx.designer.cs">
       <DependentUpon>ParteSuperior.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Mantenimientos\QR.aspx.cs">
+      <DependentUpon>QR.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\QR.aspx.designer.cs">
+      <DependentUpon>QR.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Mantenimientos\webCompras.aspx.cs">
       <DependentUpon>webCompras.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -196,6 +209,13 @@
       <DependentUpon>webCompras.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recuperar.aspx.cs">
+      <DependentUpon>Recuperar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Recuperar.aspx.designer.cs">
+      <DependentUpon>Recuperar.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Mantenimientos\MainPage.Master" />
